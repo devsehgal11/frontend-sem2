@@ -67,3 +67,45 @@ console.log(highScores)
 let numbers = [1, 2, 3, 4, 5]
 let sum = numbers.reduce((acc, current) => console.log(current))
 ```
+
+## JS-Day-3
+
+- Array Push: Add something into the array
+
+```js
+let arr = ['data']
+let newLength = arr.push('new entry')
+
+console.log(newLength)
+console.log(arr)
+```
+
+- Pop Array: Rmeove an element from an array
+
+```js
+let arr = ['data']
+let newLength = arr.pop('entry')
+
+console.log(newLength)
+console.log(arr)
+```
+
+- Shift Array: Removes the first element from the array and returns that element
+
+```js
+let arr = ['data']
+let newLength = arr.shift('entry')
+
+console.log(newLength)
+console.log(arr)
+```
+
+- Unshift Array: Adds one or more elements to the beginning of the array and returns the new length
+
+```js
+let arr = ['data']
+let newLength = arr.unshift('new entry')
+
+console.log(newLength)
+console.log(arr)
+```
