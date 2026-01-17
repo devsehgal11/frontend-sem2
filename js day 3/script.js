@@ -69,6 +69,7 @@ console.log(pos)
 
 // find if an array is pallindrome
 
+/*
 let arr = [1, 2, 3, 2, 1]
 let og = []
 let reversed = []
@@ -90,3 +91,44 @@ for(let i = 0; i < og.length; i++) {
     }
     return
 }
+*/
+
+// split odd and even numbers from an array
+
+/*
+
+let arr = [1, 2, 3, 4, 5, 6]
+let even = []
+let odd = []
+
+while (arr.length > 0) {
+    let num = arr.shift()
+    if ( num % 2 === 0 ) {
+        even.push(num)
+    }
+    else {
+        odd.push(num)
+    }
+}
+
+console.log(`Even; ${even}, Odd = ${odd}`)
+*/
+
+// move all zeroes to the end of the array
+
+/*
+let arr = [1, 0, 3, 0, 5]
+let newzero = []
+
+while (arr.length > 0) {
+    let num = arr.shift()
+    if ( num === 0 ) {
+        newzero.push(num)
+    }
+    else {
+        newzero.unshift(num)
+    }
+}
+
+console.log(newzero)
+*/

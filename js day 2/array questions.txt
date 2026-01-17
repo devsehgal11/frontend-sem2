@@ -1,7 +1,0 @@
-Questions of Array
-
-1. Iterate all the elements and print them
-2. Add 5 to each number inside the array. Take array length to be 5
-3. Reverse the array. The elements should be numeric
-4. Sort the array the descending order
-5. Find the duplicate element and return the unique element
