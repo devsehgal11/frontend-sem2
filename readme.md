@@ -264,3 +264,13 @@ It’s useful for breaking a string into parts
 let sentence = "sentence"
 let words = sentence.split(character to split)
 ```
+
+- Spread Operator - It helps to destructure the array and string and gives access to each element
+
+```js
+
+let arr = [data]
+let arr2 = [data]
+
+let newArr = [...arr, ...arr2]
+```
