@@ -176,6 +176,9 @@ let arr = [data]
 console.log(arr.includes(element))
 ```
 
+## JS-Day-5rft67
+
+
 - Slice String Method: The slice() method extracts a section of a string and returns it as a new string. It takes two arguments: start (inclusive) and end (exclusive) positions
 
 ```js
@@ -273,4 +276,188 @@ let arr = [data]
 let arr2 = [data]
 
 let newArr = [...arr, ...arr2]
+```
+
+## JS-Day-6
+
+- Return - It will return only one time. By default it acts like break statement and once the code hits the retrun statement, it will terminate the loop or move out of the block
+
+**TYPES OF FUNCTION**
+
+- Regular Function - Regular functions are the most common type of functions in JavaScript. They are defined using the function keyword
+
+Syntax:
+
+```js
+function functionName(parameters) {
+    // function body
+}
+```
+
+Example:
+
+```js
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+console.log(greet("Alice")); // Hello, Alice!
+```
+
+- Arrow Function -  Arrow functions provide a shorter syntax for writing functions. They do not have their own this context; instead, they inherit this from the parent scope
+
+Syntax:
+
+```js
+const functionName = (parameters) => {
+    // function body
+};
+```
+
+Example:
+
+```js
+const greet = (name) => `Hello, ${name}!`;
+
+console.log(greet("Bob")); // Hello, Bob!
+```
+
+Difference between Regular Function and Arrow Function:
+
+i. Syntax: Arrow functions have a more concise syntax
+
+ii. this Binding: Arrow functions do not have their own this; they inherit this from the parent scope, whereas regular functions have their own this
+
+- Anonymous Function - Anonymous functions are functions without a name. They are often used as arguments to other functions or assigned to variables
+
+Syntax:
+
+```js
+function(parameter) {
+    // function body
+}
+```
+
+Example:
+
+```js
+setTimeout(function() {
+    console.log("Hello, world!");
+}, 1000);
+```
+
+- Function Expression - Function expressions involve defining a function and assigning it to a variable. They can be named or anonymous
+
+Syntax:
+
+```js
+const functionName = function(parameters) {
+    // function body
+};
+```
+
+Example:
+
+```js
+const greet = function(name) {
+    return `Hello, ${name}!`;
+};
+
+console.log(greet("Charlie")); // Hello, Charlie!
+```
+
+- Callback Function - A callback function is a function passed as an argument to another function and is executed after some operation has been completed
+
+Syntax:
+
+```js
+function callback() {
+    // function body
+}
+
+function mainFunction(callback) {
+    // execute callback
+    callback();
+}
+```
+
+Example:
+
+```js
+function logMessage() {
+    console.log("This is a callback function.");
+}
+
+function executeCallback(callback) {
+    callback();
+}
+
+executeCallback(logMessage);
+```
+
+- First-class Function - JavaScript treats functions as first-class citizens, meaning they can be assigned to variables, passed as arguments, and returned from other functions
+
+Syntax:
+
+```js
+function firstClassFunction(variable) {
+    // function body
+}
+
+const newFunctionName = firstClassFunction;
+console.log(newFunctionName('text'))
+```
+
+Example:
+
+```js
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+const sayHello = greet;
+console.log(sayHello("Dave")); // Hello, Dave!
+```
+
+- Higher-order Function - A higher-order function is a function that accepts other functions as arguments or returns a function
+
+Syntax:
+
+```js
+function higherOrderFunction(callback) {
+    // function body
+}
+```
+
+Example:
+
+```js
+function higherOrderFunction(callback) {
+    callback();
+}
+
+function logMessage() {
+    console.log("This is a higher-order function.");
+}
+
+higherOrderFunction(logMessage);
+```
+
+- Self invoking Function (IIFE) - A self-invoking function, also known as an Immediately Invoked Function Expression (IIFE), is a function that is executed immediately after it is defined. We use this to obtain data privacy and to not give access to call anywhere
+
+
+Syntax:
+
+```js
+(function() {
+    // function body
+})();
+```
+
+Example:
+
+```js
+(function() {
+    console.log("This is an IIFE.");
+})();
 ```
