@@ -461,3 +461,57 @@ Example:
     console.log("This is an IIFE.");
 })();
 ```
+## JS-Day-7
+
+**Object Methods:**
+
+- Object Keys - Returns an array containing the object's own keys
+
+```js
+const var = {
+    obj1: 'obj1',
+    obj2: 'obj2',
+    obj3: 'obj3'
+};
+
+const keys = Object.keys(vars);
+
+console.log(keys)
+```
+
+- Object Values - Returns an array containing the object’s own enumerable property values
+
+```js
+const var = {
+    obj1: 'obj1',
+    obj2: 'obj2',
+    obj3: 'obj3'
+};
+valuess = Object.values(vars);
+
+console.log(values)
+```
+
+- Object Entries - Returns an array of the object’s own enumerable property key-value pairs as arrays
+
+```js
+const var = {
+    obj1: 'obj1',
+    obj2: 'obj2',
+    obj3: 'obj3'
+};
+
+const entries = Object.entries(vars);
+
+console.log(entries)
+```
+
+## JS-Day-8
+
+**DOM Traversal Methods**
+
+- getElementById(id) - Retrieves an element with the specified id attribute
+
+```js
+const element = document.getElementById("myElement");
+```
