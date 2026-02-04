@@ -513,5 +513,154 @@ console.log(entries)
 - getElementById(id) - Retrieves an element with the specified id attribute
 
 ```js
-const element = document.getElementById("myElement");
+const element = document.getElementById("element name");
+```
+
+1. Change the Text and Style of a Heading Element:
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 id="myHeading">Hello, World!</h1>
+  </body>
+</html>
+```
+
+```js
+// Access the heading element by its ID
+const headingElement = document.getElementById('myHeading');
+
+// Change the text and style
+headingElement.textContent = "New Heading Text";
+headingElement.style.color = "blue";
+headingElement.style.backgroundColor = "yellow";
+```
+
+2. Change the Color and Style of a Button Element:
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <button id="myButton">Click me</button>
+  </body>
+</html>
+```
+
+```js
+// Access the button element by its ID
+const buttonElement = document.getElementById('myButton');
+
+// Change the button text color and background color
+buttonElement.style.color = "white";
+buttonElement.style.backgroundColor = "green";
+buttonElement.textContent = "Updated Button Text";
+```
+
+3. Change the Style of a Div Element:
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="myDiv" style="width: 100px; height: 100px; background-color: lightgray;"></div>
+  </body>
+</html>
+```
+
+```js
+/ Access the div element by its ID
+const divElement = document.getElementById('myDiv');
+
+// Change the background color and size
+divElement.style.backgroundColor = "blue";
+divElement.style.width = "150px";
+divElement.style.height = "150px";
+```
+
+- getElementsByClassName(className) - Retrieves an HTMLCollection of elements with the specified class attribute
+
+```js
+const elements = document.getElementsByClassName("class name");
+```
+
+- getElementsByTagName(tagName) - Retrieves an HTMLCollection of elements with the specified tag name
+
+```js
+const elements = document.getElementsByTagName("tag name");
+```
+
+- querySelector(selector) - Retrieves the first element that matches the specified CSS selector
+
+```js
+const element = document.querySelector("#elementName .className");
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>querySelector Example</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Hello, World!</h1>
+        <p>This is a simple example using querySelector.</p>
+    </div>
+</body>
+</html>
+```
+
+```js
+// Select the first <p> element inside the #content div using querySelector
+const paragraph = document.querySelector("#content p");
+
+// Change the text content of the selected paragraph
+paragraph.textContent = "This paragraph has been updated using querySelector.";
+
+// Change the style of the selected paragraph
+paragraph.style.color = "blue";
+
+// Select and modify the <h1> element inside the #content div
+const heading = document.querySelector("#content h1");
+heading.textContent = "Hello, DOM!";
+
+// You can also select elements by tag name
+const title = document.querySelector("title");
+title.textContent = "Updated Title";
+```
+
+- querySelectorAll(selector) - Retrieves all elements that match the specified CSS selector, returning a NodeList
+
+```js
+const elements = document.querySelectorAll("elementTag.className");
+```
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="container">
+      <p class="selected">Paragraph 1</p>
+      <p>Paragraph 2</p>
+      <p class="selected">Paragraph 3</p>
+      <p>Paragraph 4</p>
+    </div>
+  </body>
+</html>
+```
+
+```js
+// Select all <p> elements with the class "selected"
+const selectedParagraphs = document.querySelectorAll('.selected');
+
+// Loop through the selected elements and do something with them
+selectedParagraphs.forEach(paragraph => {
+  console.log(paragraph.textContent);
+});
+
+// Output:
+// "Paragraph 1"
+// "Paragraph 3"
 ```
