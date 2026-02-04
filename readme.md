@@ -664,3 +664,169 @@ selectedParagraphs.forEach(paragraph => {
 // "Paragraph 1"
 // "Paragraph 3"
 ```
+
+## JS-Day-10
+
+**Change / Update Text / Styles / Properties of an Element**
+
+- innerText -  It gets or sets the visible text content within an element, excluding any hidden or styled elements
+
+```html
+<div id="myElement">
+    This is some <span style="display: none;">hidden</span> text.
+</div>
+```
+
+```js
+const element = document.getElementById("myElement");
+const text = element.innerText;
+console.log(text);
+// Output: "This is some text."
+```
+
+- innerHTML - It gets or sets the HTML content of an element, including any HTML tags and their content
+
+```html
+<div id="myElement">
+    This is some <b>bold</b> text.
+</div>
+```
+
+```js
+const element = document.getElementById("myElement");
+const html = element.innerHTML;
+console.log(html);
+// Output: "This is some <b>bold</b> text."
+```
+
+- textCotent - It gets or sets the text content of an element, including all text, regardless of whether it’s styled or hidden
+
+```html
+<div id="myElement">
+    This is some <span style="display: none;">hidden</span> text.
+</div>
+```
+
+```js
+const element = document.getElementById("myElement");
+const text = element.textContent;
+console.log(text);
+// Output: "This is some hidden text."
+```
+
+**Create / Remove / Append Elements**
+
+- Create Elements - Involves creating new HTML elements in the DOM using JavaScript. These elements can be any valid HTML element, and they can be added to the document
+
+```js
+const newElement = document.createElement("tagName");
+```
+
+Example:
+
+```html
+<div id="container">
+    <p>This is a container.</p>
+</div>
+```
+
+```js
+// Create a new element and set its content
+const newParagraph = document.createElement("p");
+newParagraph.textContent = "This is a dynamically created paragraph.";
+
+// Append the new element to the container
+const container = document.getElementById("container");
+container.appendChild(newParagraph);
+```
+
+- Remove Elements - Involves removing existing elements from the DOM. This is useful for cleaning up or dynamically updating the page
+
+```js
+const elementToRemove = document.getElementById("elementId");
+elementToRemove.remove();
+```
+
+Example:
+
+```html
+<div id="container">
+    <p>This is a container.</p>
+</div>
+```
+
+```js
+// Remove the <p> element from the container
+const elementToRemove = document.querySelector("p");
+elementToRemove.remove();
+```
+
+- Append Elements - Involves adding elements as children to other elements in the DOM, allowing you to build and modify the document structure dynamically
+
+```js
+const parentElement = document.getElementById("parentElementId");
+parentElement.appendChild(newElement);
+```
+
+Example:
+
+```html
+<div id="container">
+    <p>This is a container.</p>
+</div>
+```
+
+```js
+// Create a new element and set its content
+const newParagraph = document.createElement("p");
+newParagraph.textContent = "This is a dynamically created paragraph.";
+
+// Append the new element to the container
+const container = document.getElementById("container");
+container.appendChild(newParagraph);
+```
+
+**Date/Time Methods**
+
+- setTimeout - setTimeout is used to execute a function or code block once, with a specified delay (in milliseconds), after which the function is called
+
+```js
+setTimeout(function, delay)
+```
+
+Example:
+
+```js
+function greet() {
+    console.log("Hello, world!");
+}
+
+// Execute the greet function after 2000 milliseconds (2 seconds)
+setTimeout(greet, 2000);
+```
+
+- setInterval - setInterval is used to repeatedly execute a function or code block at specified intervals (in milliseconds) until it is cleared
+
+```js
+setInterval(function, interval)
+```
+
+Example:
+
+```js
+let count = 0;
+
+function incrementAndLog() {
+    count++;
+    console.log(`Count: ${count}`);
+}
+
+// Execute the incrementAndLog function every 1000 milliseconds (1 second)
+const intervalID = setInterval(incrementAndLog, 1000);
+
+// Clear the interval after 5 seconds
+setTimeout(() => {
+    clearInterval(intervalID);
+    console.log("Interval cleared.");
+}, 5000);
+```
