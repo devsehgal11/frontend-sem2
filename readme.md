@@ -830,3 +830,175 @@ setTimeout(() => {
     console.log("Interval cleared.");
 }, 5000);
 ```
+
+## JS-Day-11
+
+**Event Handlers**
+
+- onChange - The onchange event is triggered when the value of an input element changes. It is commonly used with form elements like text inputs and select boxes
+
+```html
+   <input type="text" id="myInput" onchange="handleChange()">
+   <p id="output">Change detected!</p>
+
+   <script>
+       function handleChange() {
+           document.getElementById("output").textContent = "Change detected!";
+       }
+   </script>
+```
+
+- onClick - The onclick event is triggered when an element is clicked
+
+```html
+   <button id="myButton" onclick="handleClick()">Click Me</button>
+   <p id="output">Button not clicked yet.</p>
+
+   <script>
+       function handleClick() {
+           document.getElementById("output").textContent = "Button clicked!";
+       }
+   </script>
+```
+
+- onMouseHover - The onmouseover event is triggered when the mouse pointer is moved over an element
+
+```html
+   <div id="myDiv" onmouseover="handleMouseOver()">Hover over me</div>
+   <p id="output">Mouse not over the div.</p>
+
+   <script>
+       function handleMouseOver() {
+           document.getElementById("output").textContent = "Mouse over the div!";
+       }
+   </script>
+```
+
+- onMouseOut - The onmouseout event is triggered when the mouse pointer is moved out of an element
+
+```html
+   <div id="myDiv" onmouseout="handleMouseOut()">Move the mouse away</div>
+   <p id="output">Mouse not out of the div yet.</p>
+
+   <script>
+       function handleMouseOut() {
+           document.getElementById("output").textContent = "Mouse out of the div!";
+       }
+   </script>
+```
+
+- onKeyDown - The onkeydown event is triggered when a keyboard key is pressed down
+
+```html
+   <input type="text" id="myInput" onkeydown="handleKeyDown()">
+   <p id="output">Key not pressed yet.</p>
+
+   <script>
+       function handleKeyDown() {
+           document.getElementById("output").textContent = "Key pressed!";
+       }
+   </script>
+```
+
+- onLoad - The onload event is triggered when a page or an image has finished loading
+
+```html
+   <img src="example.jpg" id="myImage" onload="handleLoad()">
+   <p id="output">Image not loaded yet.</p>
+
+   <script>
+       function handleLoad() {
+           document.getElementById("output").textContent = "Image loaded!";
+       }
+   </script>
+```
+
+**Event Handlers with Event Listeners**
+
+```js
+elementName.addEventListener(event, function)
+```
+
+- onChange - The change event is triggered when the value of an input element changes
+
+```html
+   <input type="text" id="myInput">
+   <p id="output">Change detected!</p>
+
+   <script>
+       const inputElement = document.getElementById("myInput");
+       inputElement.addEventListener("change", function() {
+           document.getElementById("output").textContent = "Change detected!";
+       });
+   </script>
+```
+
+- onClick - The click event is triggered when an element is clicked
+
+```html
+   <button id="myButton">Click Me</button>
+   <p id="output">Button not clicked yet.</p>
+
+   <script>
+       const buttonElement = document.getElementById("myButton");
+       buttonElement.addEventListener("click", function() {
+           document.getElementById("output").textContent = "Button clicked!";
+       });
+   </script>
+```
+
+- onMouseHover - The mouseover event is triggered when the mouse pointer is moved over an element
+
+```html
+   <div id="myDiv">Hover over me</div>
+   <p id="output">Mouse not over the div.</p>
+
+   <script>
+       const divElement = document.getElementById("myDiv");
+       divElement.addEventListener("mouseover", function() {
+           document.getElementById("output").textContent = "Mouse over the div!";
+       });
+   </script>
+```
+
+- onMouseOut - The mouseout event is triggered when the mouse pointer is moved out of an element
+
+```html
+   <div id="myDiv">Move the mouse away</div>
+   <p id= "output">Mouse not out of the div yet.</p>
+
+   <script>
+       const divElement = document.getElementById("myDiv");
+       divElement.addEventListener("mouseout", function() {
+           document.getElementById("output").textContent = "Mouse out of the div!";
+       });
+   </script>
+```
+
+- onKeyDown - The keydown event is triggered when a keyboard key is pressed down
+
+```html
+   <input type="text" id="myInput">
+   <p id="output">Key not pressed yet.</p>
+
+   <script>
+       const inputElement = document.getElementById("myInput");
+       inputElement.addEventListener("keydown", function() {
+           document.getElementById("output").textContent = "Key pressed!";
+       });
+   </script>
+```
+
+- onLoad - The load event is triggered when a page or an image has finished loading
+
+```html
+   <img src="example.jpg" id="myImage">
+   <p id="output">Image not loaded yet.</p>
+
+   <script>
+       const imageElement = document.getElementById("myImage");
+       imageElement.addEventListener("load", function() {
+           document.getElementById("output").textContent = "Image loaded!";
+       });
+   </script>
+```
